@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 11 Physics Quiz - Vectors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function startTimer() {
+            var startTime = new Date();
+            document.getElementById('start-time').value = startTime.toISOString();
+
+            var endTime = new Date(startTime.getTime() + 30 * 60 * 1000); // 30 minutes
+            document.getElementById('end-time').value = endTime.toISOString();
+        }
+    </script>
+</head>
+<body onload="startTimer()">
+    <header>
+        <h1>Grade 11 Physics Quiz - Vectors</h1>
+    </header>
+    
+    <main>
+        <section id="student-info">
+            <img src="https://via.placeholder.com/150" alt="Quiz Image">
+            <form id="quiz-form" action="submit_quiz.php" method="POST">
+                <label for="student-name">Name:</label>
+                <input type="text" id="student-name" name="student_name" required>
+
+                <label for="student-email">E-mail:</label>
+                <input type="text" id="student-email" name="student_email" required>
+                
+                <label for="course">Course:</label>
+                <input type="text" id="course" name="course" value="SPH3U" readonly>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <input type="hidden" id="start-time" name="start_time">
+                <input type="hidden" id="end-time" name="end_time">
+
+                <fieldset>
+                    <legend>1. What is a vector?</legend>
+                    <label><input type="radio" name="q1" value="a" required> A quantity with only magnitude</label><br>
+                    <label><input type="radio" name="q1" value="b"> A quantity with both magnitude and direction</label><br>
+                    <label><input type="radio" name="q1" value="c"> A quantity that can be added or subtracted</label><br>
+                    <label><input type="radio" name="q1" value="d"> A quantity that is always positive</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Which of the following is an example of a vector?</legend>
+                    <label><input type="radio" name="q2" value="a" required> Speed</label><br>
+                    <label><input type="radio" name="q2" value="b"> Distance</label><br>
+                    <label><input type="radio" name="q2" value="c"> Velocity</label><br>
+                    <label><input type="radio" name="q2" value="d"> Time</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. What is the magnitude of a vector?</legend>
+                    <label><input type="radio" name="q3" value="a" required> The length of the vector</label><br>
+                    <label><input type="radio" name="q3" value="b"> The direction of the vector</label><br>
+                    <label><input type="radio" name="q3" value="c"> The angle of the vector</label><br>
+                    <label><input type="radio" name="q3" value="d"> The unit of the vector</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. How are vectors typically represented?</legend>
+                    <label><input type="radio" name="q4" value="a" required> By arrows</label><br>
+                    <label><input type="radio" name="q4" value="b"> By numbers only</label><br>
+                    <label><input type="radio" name="q4" value="c"> By circles</label><br>
+                    <label><input type="radio" name="q4" value="d"> By colors</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>5. What does the direction of a vector indicate?</legend>
+                    <label><input type="radio" name="q5" value="a" required> The angle relative to a reference direction</label><br>
+                    <label><input type="radio" name="q5" value="b"> The speed of an object</label><br>
+                    <label><input type="radio" name="q5" value="c"> The distance traveled</label><br>
+                    <label><input type="radio" name="q5" value="d"> The mass of an object</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>6. What is vector addition?</legend>
+                    <label><input type="radio" name="q6" value="a" required> Adding vectors end to end</label><br>
+                    <label><input type="radio" name="q6" value="b"> Multiplying vectors</label><br>
+                    <label><input type="radio" name="q6" value="c"> Subtracting vectors</label><br>
+                    <label><input type="radio" name="q6" value="d"> Dividing vectors</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>7. Which of the following vectors can be subtracted?</legend>
+                    <label><input type="radio" name="q7" value="a" required> Any vector</label><br>
+                    <label><input type="radio" name="q7" value="b"> Only positive vectors</label><br>
+                    <label><input type="radio" name="q7" value="c"> Only negative vectors</label><br>
+                    <label><input type="radio" name="q7" value="d"> Only unit vectors</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>8. What is the resultant vector?</legend>
+                    <label><input type="radio" name="q8" value="a" required> The vector sum of two or more vectors</label><br>
+                    <label><input type="radio" name="q8" value="b"> The average of two vectors</label><br>
+                    <label><input type="radio" name="q8" value="c"> The difference between two vectors</label><br>
+                    <label><input type="radio" name="q8" value="d"> The smallest of the vectors</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>9. How do you represent a vector on a coordinate system?</legend>
+                    <label><input type="radio" name="q9" value="a" required> By its components along the axes</label><br>
+                    <label><input type="radio" name="q9" value="b"> By its magnitude only</label><br>
+                    <label><input type="radio" name="q9" value="c"> By its direction only</label><br>
+                    <label><input type="radio" name="q9" value="d"> By its angle with respect to the origin</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>10. Which of the following statements about vectors is true?</legend>
+                    <label><input type="radio" name="q10" value="a" required> Vectors can be added graphically</label><br>
+                    <label><input type="radio" name="q10" value="b"> Vectors cannot be added algebraically</label><br>
+                    <label><input type="radio" name="q10" value="c"> Vectors have no direction</label><br>
+                    <label><input type="radio" name="q10" value="d"> Vectors cannot be subtracted graphically</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>11. What is the component form of a vector?</legend>
+                    <label><input type="radio" name="q11" value="a" required> The vector written as (x, y) in a coordinate system</label><br>
+                    <label><input type="radio" name="q11" value="b"> The vector written as a single value</label><br>
+                    <label><input type="radio" name="q11" value="c"> The vector as a direction only</label><br>
+                    <label><input type="radio" name="q11" value="d"> The vector as a magnitude only</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>12. How do you calculate the magnitude of a vector in 2D?</legend>
+                    <label><input type="radio" name="q12" value="a" required> By the Pythagorean theorem</label><br>
+                    <label><input type="radio" name="q12" value="b"> By the sum of its components</label><br>
+                    <label><input type="radio" name="q12" value="c"> By its angle with the x-axis</label><br>
+                    <label><input type="radio" name="q12" value="d"> By dividing its components</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>13. What is a unit vector?</legend>
+                    <label><input type="radio" name="q13" value="a" required> A vector with a magnitude of 1</label><br>
+                    <label><input type="radio" name="q13" value="b"> A vector with a magnitude of 0</label><br>
+                    <label><input type="radio" name="q13" value="c"> A vector with an undefined magnitude</label><br>
+                    <label><input type="radio" name="q13" value="d"> A vector with the same direction as the original vector</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>14. What is vector projection?</legend>
+                    <label><input type="radio" name="q14" value="a" required> The shadow of one vector onto another</label><br>
+                    <label><input type="radio" name="q14" value="b"> The sum of two vectors</label><br>
+                    <label><input type="radio" name="q14" value="c"> The perpendicular distance between two vectors</label><br>
+                    <label><input type="radio" name="q14" value="d"> The angle between two vectors</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>15. How can vectors be used in physics?</legend>
+                    <label><input type="radio" name="q15" value="a" required> To represent forces, velocities, and accelerations</label><br>
+                    <label><input type="radio" name="q15" value="b"> To calculate the area of geometric shapes</label><br>
+                    <label><input type="radio" name="q15" value="c"> To determine the mass of objects</label><br>
+                    <label><input type="radio" name="q15" value="d"> To measure temperature changes</label>
+                </fieldset>
+                <!-- Submit and Reset buttons -->
+ 
+                <div class="button-section">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+
+</body>
+</html>
